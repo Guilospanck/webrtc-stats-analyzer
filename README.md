@@ -8,6 +8,9 @@ A static React + Vite SPA to parse Chrome WebRTC stats exports (`webrtc-internal
 - Computes a 0–100 heuristic quality score and top issues list.
 - Renders summary tables and time-series charts.
 
+## Demo Screenshot
+![WebRTC Stats Analyzer UI](public/demo.svg)
+
 ## Supported Inputs
 - Chrome `webrtc-internals` export JSON (`webrtc_internals_dump.txt`)
 - `RTCStatsDump` text export (`rtcstats_dump.txt`)
