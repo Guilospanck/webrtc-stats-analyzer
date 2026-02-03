@@ -1,5 +1,7 @@
 # WebRTC Stats Analyzer
 
+[![Deploy to GitHub Pages](https://github.com/Guilospanck/webrtc-stats-analyzer/actions/workflows/pages.yml/badge.svg)](https://github.com/Guilospanck/webrtc-stats-analyzer/actions/workflows/pages.yml)
+
 A static React + Vite SPA to parse Chrome WebRTC stats exports (`webrtc-internals` and `RTCStatsDump`) and produce a quality diagnosis with charts and tables.
 
 ## What It Does
