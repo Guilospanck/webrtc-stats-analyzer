@@ -22,11 +22,6 @@ A static React + Vite SPA to parse Chrome WebRTC stats exports (`webrtc-internal
 2. `npm run dev`
 3. Open the Vite URL and upload a dump file.
 
-## GitHub Pages
-Site URL: `https://guilospanck.github.io/webrtc-stats-analyzer/`
-
-Deployment uses GitHub Actions. In repo settings, set Pages source to `GitHub Actions`.
-
 ## Tests
 - `npm test`
 
