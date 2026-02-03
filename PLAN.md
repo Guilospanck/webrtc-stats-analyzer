@@ -1,7 +1,7 @@
 # WebRTC Session Analysis Tool — Plan
 
 ## Summary
-Build a static React + Vite SPA that ingests Chrome `webrtc-internals` exports (`webrtc_internals_dump.txt`) and `RTCStatsDump` exports (`rtcstats_dump.txt`), parses and normalizes them in-browser, and produces a summary quality score plus deep-dive charts and tables. The tool is aimed at WebRTC engineers and focuses on bitrate, jitter, packet loss, RTT, resolution, frame rate, and freeze count. No backend, no export, single-session per load, with PC selection if multiple peer connections exist.
+Build a static React + Vite SPA that ingests Chrome `webrtc-internals` exports (`webrtc_internals_dump.txt`) and `RTCStatsDump` exports (`rtcstats_dump.txt`), parses and normalizes them in-browser, and produces a summary quality score plus deep-dive charts and tables. The tool is aimed at WebRTC engineers and focuses on bitrate, jitter, packet loss, RTT, resolution, frame rate, and freeze count. No backend, no export, single-session per load, with PC selection if multiple peer connections exist. Deployment targets GitHub Pages via GitHub Actions.
 
 ## Scope and Goals
 - Primary user: WebRTC engineers
@@ -9,6 +9,7 @@ Build a static React + Vite SPA that ingests Chrome `webrtc-internals` exports (
 - Input: Raw Chrome exports (two formats)
 - Output: Summary + deep dive + raw normalized view
 - No backend, no persistence, no multi-session comparison in v1
+- GitHub Pages deployment on push to `main`
 
 ## Architecture and Data Flow
 1. File ingest
@@ -68,12 +69,18 @@ Build a static React + Vite SPA that ingests Chrome `webrtc-internals` exports (
 - React + Vite
 - Chart.js for charts
 - No backend
+- GitHub Pages via GitHub Actions
 
 ## Public APIs / Interfaces
 - Input file formats supported:
   - `RTCStatsDump` (line-based)
   - Chrome `webrtc-internals` export JSON
 - No external API in v1.
+
+## Deployment
+- Configure Vite `base` to `/webrtc-stats-analyzer/`.
+- GitHub Actions workflow builds on push to `main` and deploys `dist/` to Pages.
+- GitHub Pages source: `GitHub Actions`.
 
 ## Tests and Scenarios
 - Parser unit tests for both example files:
